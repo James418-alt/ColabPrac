@@ -4,7 +4,7 @@ export const dbConfig = async () => {
     .then(() => {
       console.log("Server Up!");
     })
-    .catch((error) => {
+    .catch((error: Error) => {
       console.log(error);
     });
 };
