@@ -1,5 +1,6 @@
 export interface iAdmin {
-  name: string;
+  Fname: string;
+  Lname: string;
   email: string;
   password: string;
   phone: string;
