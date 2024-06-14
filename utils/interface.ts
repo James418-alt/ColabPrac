@@ -4,4 +4,5 @@ export interface iAdmin {
   email: string;
   password: string;
   phone: string;
+  verify: boolean;
 }

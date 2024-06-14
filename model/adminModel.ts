@@ -21,6 +21,10 @@ const adminModel = model<iAdminData>(
       phone: {
         type: String,
       },
+      verify: {
+        type: Boolean,
+        default: false,
+      },
     },
     { timestamps: true }
   )
