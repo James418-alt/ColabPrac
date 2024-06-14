@@ -86,3 +86,36 @@ export const signinUser = async (req: Request, res: Response) => {
     res.status(400);
   }
 };
+
+export const viewAll = async (req: Request, res: Response) => {
+  try {
+    const getD = await adminModel.find();
+    res.status(200).json({
+      message: "All Users",
+      status: 200,
+      data: getD,
+    });
+  } catch (error: any) {
+    res.status(200).json({
+      message: "Error Occured",
+      status: 400,
+    });
+  }
+};
+
+export const viewOne = async (req: Request, res: Response) => {
+  try {
+    const { Id } = req.params;
+    const getD = await adminModel.findById(Id);
+    res.status(200).json({
+      message: "User Found",
+      data: getD,
+      status: 200,
+    });
+  } catch (error: any) {
+    res.status(400).json({
+      message: "Error Occured",
+      status: 400,
+    });
+  }
+};
